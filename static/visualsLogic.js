@@ -35,7 +35,7 @@ d3.csv("https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/fireb
     // Create elements for each year 
     for (var i=0; i<data.length; i++) {
         var entry = data[i];
-        dropdownMenu.append("option").text(entry['year']);
+        dropdownMenu.append("option").text(entry['Peak Brightness Date/Time (UT)']);
     }
     
     // Set default plots
