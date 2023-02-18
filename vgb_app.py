@@ -12,7 +12,7 @@ from flask import Flask, render_template, redirect
 #################################################
 # Database Setup
 #################################################
-engine = create_engine(f'postgresql://KThao17:0417@localhost:5432/fireball')
+engine = create_engine(f'postgresql://KThao17:KameronThao17!@localhost:5432/fireball')
 connection = engine.connect()
 
 pg = pd.read_sql('select * from fireball', connection)
