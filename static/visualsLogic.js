@@ -27,7 +27,7 @@ function optionChanged(selected_year) {
 }
 
 // Read in file
-d3.csv("https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/fireball_data_years.csv").then(function(data) {
+d3.csv("https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/fireball_year_count.csv").then(function(data) {
     console.log(data);
 
     var dropdownMenu = d3.select("#selDataset");
@@ -35,7 +35,7 @@ d3.csv("https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/fireb
     // Create elements for each year 
     for (var i=0; i<data.length; i++) {
         var entry = data[i];
-        dropdownMenu.append("option").text(entry['Peak Brightness Date/Time (UT)']);
+        dropdownMenu.append("option").text(entry['year']);
     }
     
     // Set default plots
