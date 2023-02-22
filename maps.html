@@ -18,7 +18,7 @@
         crossorigin=""></script>
 
         <!-- Our CSS -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="static/css/MapsStyle.css">
     </head>
 
     <body>       
@@ -35,30 +35,29 @@
         
 
         <!-- The div where we'll insert our map -->
-        <div class="row">
-
+          <div class="row">
             <div class="panel panel-default" style="float:center; margin-left: 0px; margin-right:0px; color:white;">
-                
-                <div class="panel-heading text-center typeface-js" style="background-color: rgb(201, 194, 194); color: rgb(5, 5, 5); visibility: visible;">
-                  <h1>Fireball Events Map</h1>
-                  <br>
-                </div>
-                
-                
-              </br>
+          
+              <div class="panel-heading text-center typeface-js"
+                style="background-color: rgb(201, 194, 194); color: rgb(5, 5, 5); visibility: visible;">
+                <h1>Fireball Events Map</h1>
               </div>
-        </br>
-        </div>
-
+              <div id="map" class="panel-body"></div>
+            </div>
+            </br>
+          </div>
+          
         <footer class="text-center">
             <b><h5>The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
         </footer>
 
         <!-- JavaScript file -->
-
+      
         <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="static/mapLogic.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
 
-        
+
     </body>
+  
 </html>
