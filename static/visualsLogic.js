@@ -49,7 +49,7 @@ function optionChanged(selected_year) {
             xaxis: {title: "Altitude (km)"},
             yaxis: {title: "Total Radiated Energy (J)"},
             title: "At What Altitudes do Fireballs have the Highest Radiated Energy?",
-            width: 1000,
+            width: 800,
         };
 
         // Plot chart

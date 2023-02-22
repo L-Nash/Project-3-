@@ -33,12 +33,12 @@ def welcome():
      return render_template("index.html")
 
 # Route that calls maps.html
-@app.route("/maps.html")
+@app.route("/maps")
 def maps():
     return render_template("maps.html")
 
 # Route that calls visualizations.html
-@app.route("/visualizations.html")
+@app.route("/visualizations")
 def visuals():
     return render_template("visualizations.html")
 
