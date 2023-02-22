@@ -12,24 +12,11 @@ from flask import Flask, render_template, redirect
 #################################################
 # Database Setup
 #################################################
-engine = create_engine(f'postgresql://KThao17:KameronThao17!@localhost:5432/fireball')
+engine = create_engine('sqlite:///Project-3-/fireball_project3.sqlite')
 connection = engine.connect()
 
-pg = pd.read_sql('select * from fireball', connection)
-
-# Reflect an existing database into a new model
-base = automap_base()
-# Reflect the tables
-base.prepare(engine, reflect=True)
-
-session = Session(engine)
-
-textheader = "Fireballs"
-
-# Save references to the tables from database
-fireball = base.classes.fireball
-
-session.close()
+df = pd.read_sql('select * from fireball', connection)
+df.to_csv('Project-3-/Resources/fireball_sqlite.csv', index=False)
 
 #################################################
 # Flask Setup
@@ -44,18 +31,17 @@ app = Flask(__name__)
 # Route that calls index.html template
 @app.route ("/")
 def welcome():
-     """List all available api routes"""
-     return render_template("index.html", textheader=textheader, fireball=fireball)
+     return render_template("index.html")
 
 # Route that calls maps.html
-@app.route("/maps")
+@app.route("/maps.html")
 def maps():
-    return render_template("maps.html", textheader=textheader, fireball=fireball)
+    return render_template("maps.html")
 
 # Route that calls visualizations.html
-@app.route("/visualizations")
+@app.route("/visualizations.html")
 def visuals():
-    return render_template("visualizations.html", textheader=textheader, fireball=fireball)
+    return render_template("visualizations.html")
 
 
 if __name__ == "__main__":
