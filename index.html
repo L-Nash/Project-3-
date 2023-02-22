@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Fireballs and Bolides</title>
+  <title>Fireballs</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/style.css" />
   <style>
@@ -13,7 +13,7 @@
     background-color: black;
   }
   .jumbotron {
-    background: #ba9766 linear-gradient(#ba9766, #fae6ca);
+    background: transparent linear-gradient(#ccc9c5, #74716e);
     background-size: 100% 100%;
     overflow: auto;
     width: 100%;
@@ -21,7 +21,7 @@
     margin: 0;
     padding: 0;
   }
-</style>
+  </style>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center" style="background-color: rgb(201, 194, 194);">
-        <h1>Fireballs and Bolides </h1>
+        <h1>Fireball Sightings</h1>
         <br><br>
         <a href="/maps.html" class="btn btn-info btn-lg" role="button">Maps</a>
         <a href="/visualizations.html" class="btn btn-info btn-lg" role="button">Data Visuals</a>
@@ -40,33 +40,51 @@
 
           <div class="panel panel-default" style="float:center; margin-left: 0px; margin-right:0px; color:white;">
 
-            <div class="panel-heading text-center typeface-js" style="background-color: rgb(201, 194, 194); color: rgb(5, 5, 5); visibility: visible;">
-              <h1>Overview</h1>
-              <p>An intro/overview of the dataset can go here.</p>
+            <div class="panel-heading text-center typeface-js" style="background-color: #ccc9c5; color: rgb(5, 5, 5); visibility: visible;">
+              <h4><strong><em>Fireballs, what are they?</strong></h4></em></h5>
+              <p>Fireballs are abnormally bright meteors/ shooting stars that are dramatic enough to be seen across wide areas and reach a magnitude of
+                -3 or brighter at its highest point.</p>
               <br>
+              <h4><strong><em>The Dataset</strong></h4></em></h5>
+              <p>This dataset contains fireball sighting events and data from CNEOS (Center for Near Earth Object Studies) reported by US Government sensors.<br>
+                Data dates as far as back as 1988 and currently contains more than 900 sightings. The dataset is not inclusive of all fireball occurrences.</p>
+              <br>
+              <h4><strong><em>Data Components</em></strong></h4>
+              <p><strong>Peak Brightness Date/Time (UT)</strong> - Date/time in UT (Universal Time) of event's peak brightness.<br>
+                <strong>Latitude (deg.)</strong> - Geodetic latitude in degrees north (N) or south (S) of the equator for event.<br>
+                <strong>Longitude (deg.)</strong> - Geodetic longitude in degrees east (E) or west (W) of the prime meridian for event.<br>
+                <strong>Altitude (km)</strong> - Altitude in kilometers (km) above the reference geoid for this event.<br>
+                <strong>Velocity (km/s)</strong> - Magnitude of the meteor's pre-impact velocity in kilometers per second (km/s).<br>
+                <strong>Velocity (km/s) vx</strong> - Pre-entry estimated velocity (Earth centered X component).<br>
+                <strong>Velocity (km/s) vy</strong> - Pre-entry estimated velocity (Earth centered Y component).<br>
+                <strong>Velocity (km/s) vz</strong> - Pre-entry estimated velocity (Earth centered Z component).<br>
+                <strong>Total Radiated Energy (J)</strong> - The approximate total radiated energy in the atmosphere in Joules.<br>
+                <strong>Calculated Total Impact Energy (kt)</strong> - Impact energy of the event in kilotons of TNT (kt).
+              </p><br>
+              <h4><em>Use the buttons to navigate to a different dashboard view to see visualizations of this dataset!</em></h4>
+              
             </div>
-            <div class= "panel-body text-center" >
-              <img src="images/fireball.jpg" atl="fireball image" width="300" height = "200">
-              <img src="images/fireball_one.jpg" atl="fireball image two" width="300" height = "200">
-              <img src="images/fireball_two.jpg" atl="fireball image three" width="300" height = "200">
+            <div class= "panel-body text-center" style="background-color: black" >
+              <img src="../static/images/fireball.jpg" atl="fireball image" width="300" height = "200">
+              <img src="../static/images/fireball_one.jpg" atl="fireball image two" width="300" height = "200">
+              <img src="../static/images/fireball_two.jpg" atl="fireball image three" width="300" height = "200">
             </div>
-          </br>
+          
           </div>
       </div>
 
-      <footer class="text-center">
-          <b><h5>The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
-      </footer>
-  
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
-
-
-
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   
 </body>
+
+<footer class="text-center">
+  <b><h5 style="color: white">The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
+</footer>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 
 </html>

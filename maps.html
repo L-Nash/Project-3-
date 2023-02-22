@@ -19,13 +19,28 @@
 
         <!-- Our CSS -->
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="static/css/style.css" />
+        <style>
+        body {
+            background-color: black;
+        }
+        .jumbotron {
+            background: transparent linear-gradient(#ccc9c5, #74716e);
+            background-size: 100% 100%;
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
     </head>
 
     <body>       
         <div class="container">
             <div class="row">
               <div class="col-md-12 jumbotron text-center" style="background-color: rgb(201, 194, 194);">
-                <h1>Fireballs and Bolides </h1>
+                <h1>Fireball Sightings</h1>
                 <br><br>
                 <a href="/index.html" class="btn btn-info btn-lg" role="button">Home</a>
                 <a href="/visualizations.html" class="btn btn-info btn-lg" role="button">Data Visuals</a>
@@ -50,15 +65,27 @@
         </br>
         </div>
 
-        <footer class="text-center">
-            <b><h5>The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
-        </footer>
+        
+        
+        
 
-        <!-- JavaScript file -->
+        
 
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+        
+        
 
         
     </body>
+
+    <footer class="text-center">
+      <b><h5 style="color: white">The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 </html>
