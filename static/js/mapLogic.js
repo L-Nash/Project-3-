@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //get data
 d3.csv().then(function(data) {
-  // Plot all earthquakes
+  // Plot all coordinates
 layer1 =   L.geoJson(data, {
     pointToLayer: formatMarkers,
     }).addTo(fireballMap);
