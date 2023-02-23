@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Maps Page</title>
+        <title>Maps</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -18,7 +18,6 @@
         crossorigin=""></script>
 
         <!-- Our CSS -->
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="static/css/style.css" />
         <style>
         body {
@@ -55,25 +54,13 @@
             <div class="panel panel-default" style="float:center; margin-left: 0px; margin-right:0px; color:white;">
                 
                 <div class="panel-heading text-center typeface-js" style="background-color: rgb(201, 194, 194); color: rgb(5, 5, 5); visibility: visible;">
-                  <h1>Fireball Events Map</h1>
-                  <br>
+                  <h3><b>Fireball Events Map</b></h3>
                 </div>
-                
-                
-              </br>
+
+                <div id="map" class="panel-body"></div>
               </div>
         </br>
         </div>
-
-        
-        
-        
-
-        
-
-        
-        
-
         
     </body>
 
@@ -84,6 +71,8 @@
     <!-- JavaScript file -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+    <script type="text/javascript" src="static/leaflet-color-markers.js"></script>
+    <script src="static/mapLogic.js"></script>
 
     <div id="stars"></div>
     <div id="stars2"></div>
