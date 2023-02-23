@@ -1,5 +1,5 @@
 // Store URL
-const url = "https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/cneos_fireball_data.csv";
+const url = "https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/fireball_sqlite.csv";
 
 // Read in fireball data with D3 library
 d3.csv(url).then(function(data){
