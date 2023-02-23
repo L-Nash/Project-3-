@@ -14,17 +14,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var csv = "Resources/fireball_dropna.csv"
 
 
-// // // //get data
+// // //get data
 d3.csv(csv).then(function(data) {
 layer1 =   L.geoJson(data, {
     pointToLayer: createMarkers(data),
     }).addTo(fireballMap); 
 
 
-//  L.marker([33.1, 173.7]).addTo(fireballMap);
+ L.marker([33.1, 173.7]).addTo(fireballMap);
  
-// var long = data['Longitud (dg.)'];
-var latlng = [data['Latitude (deg.)'], data['Longitud (dg.)']];
+var long = data['Longitud (dg.)'];
+var lat = data['Latitude (deg.)'];
 
 function createMarkers(data, latlng) {
         console.log(data);
@@ -35,6 +35,24 @@ function createMarkers(data, latlng) {
 
 });
 
+// d3.csv(csv).then(function(data) {
+
+// // var long = data['Longitud (dg.)'];
+// // var lat = data['Latitude (deg.)'];
+
+// for (var i = 0; i < data.length; i++) {
+//   layer1 =   L.geoJson(data, {
+//   L.marker(latlng, {
+//     fillOpacity: 0.75,
+//     color: "white",
+//     fillColor: "purple",
+    
+//     radius: 10
+//   }).addTo(fireballMap)};
+
+// }
+
+// });
 
 
 
