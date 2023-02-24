@@ -7,21 +7,20 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, render_template, redirect
 
+#################################################
+# Flask Setup
+#################################################
+app = Flask(__name__)
 
 
 #################################################
 # Database Setup
 #################################################
-engine = create_engine('sqlite:///Project-3-/fireball_project3.sqlite')
+engine = create_engine('sqlite:///fireball_project3.sqlite')
 connection = engine.connect()
 
 df = pd.read_sql('select * from fireball', connection)
-df.to_csv('Project-3-/Resources/fireball_sqlite.csv', index=False)
-
-#################################################
-# Flask Setup
-#################################################
-app = Flask(__name__)
+df.to_csv('Resources/fireball_sqlite.csv', index=False)
 
 
 #################################################
@@ -34,12 +33,12 @@ def welcome():
      return render_template("index.html")
 
 # Route that calls maps.html
-@app.route("/maps.html")
+@app.route("/maps")
 def maps():
     return render_template("maps.html")
 
 # Route that calls visualizations.html
-@app.route("/visualizations.html")
+@app.route("/visualizations")
 def visuals():
     return render_template("visualizations.html")
 
