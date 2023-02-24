@@ -42,6 +42,11 @@ def maps():
 def visuals():
     return render_template("visualizations.html")
 
+# Route that calls staticVisuals.html
+@app.route("/staticvisual")
+def staticvisual():
+    return render_template("staticVisuals.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
