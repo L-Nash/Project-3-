@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Maps Page</title>
+        <title>Maps</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -18,14 +18,28 @@
         crossorigin=""></script>
 
         <!-- Our CSS -->
-        <link rel="stylesheet" type="text/css" href="static/css/MapsStyle.css">
+        <link rel="stylesheet" href="static/css/MapsStyle.css" />
+        <style>
+        body {
+            background-color: black;
+        }
+        .jumbotron {
+            background: transparent linear-gradient(#ccc9c5, #74716e);
+            background-size: 100% 100%;
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
     </head>
 
     <body>       
         <div class="container">
             <div class="row">
               <div class="col-md-12 jumbotron text-center" style="background-color: rgb(201, 194, 194);">
-                <h1>Fireballs and Bolides </h1>
+                <h1>Fireball Sightings</h1>
                 <br><br>
                 <a href="/index.html" class="btn btn-info btn-lg" role="button">Home</a>
                 <a href="/visualizations.html" class="btn btn-info btn-lg" role="button">Data Visuals</a>
@@ -37,27 +51,31 @@
         <!-- The div where we'll insert our map -->
           <div class="row">
             <div class="panel panel-default" style="float:center; margin-left: 0px; margin-right:0px; color:white;">
-          
-              <div class="panel-heading text-center typeface-js"
-                style="background-color: rgb(201, 194, 194); color: rgb(5, 5, 5); visibility: visible;">
-                <h1>Fireball Events Map</h1>
+                
+                <div class="panel-heading text-center typeface-js" style="background-color: rgb(201, 194, 194); color: rgb(5, 5, 5); visibility: visible;">
+                  <h3><b>Fireball Events Map</b></h3>
+                </div>
+
+                <div id="map" class="panel-body"></div>
               </div>
-              <div id="map" class="panel-body"></div>
-            </div>
-            </br>
-          </div>
-          
-        <footer class="text-center">
-            <b><h5>The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
-        </footer>
-
-        <!-- JavaScript file -->
-      
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script type="text/javascript" src="static/mapLogic.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
-
-
+        </br>
+        </div>
+        
     </body>
-  
+
+    <footer class="text-center">
+      <b><h5 style="color: white">The data for this dashboard was gathered from <a href="https://cneos.jpl.nasa.gov">cneos.jpl.nasa.gov</a>.</h5></b>
+    </footer>
+
+    <!-- JavaScript file -->
+    
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+    <!-- <script type="text/javascript" src="static/leaflet-color-markers.js"></script> -->
+    <script type="text/javascript" src="static/mapLogic.js"></script>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 </html>
