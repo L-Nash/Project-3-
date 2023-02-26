@@ -1,6 +1,7 @@
 // Store URL
 const url = "https://raw.githubusercontent.com/L-Nash/Project-3-/main/Resources/fireball_sqlite.csv";
 
+
 var averageIE = 0.0;
 var averageVe = 0.0;
 var averageRE = 0.0;
@@ -37,17 +38,20 @@ function getAverageIE (data) {
 
 }
 
+
 function createMarkers(data) {
 
     var markers = [];
 
     // Create empty marker lists to filter by decades
+
     var radEn = [];
     var alt   = [];
     var vel = []; 
     var imEn = [];
     var tenYear = [];
     // console.log(radEn)
+
 
     // Loop to get data for each record
     for (var i=0; i<data.length; i++) {
@@ -197,7 +201,7 @@ function createMarkers(data) {
   }
   
     createMap(markerLayers);
-    
+
 }
 
 // Function to create map
@@ -205,6 +209,7 @@ function createMap(markerLayers) {
 
     // Create the base layers
     // Street map and topographic map
+
     var street =  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -214,6 +219,7 @@ function createMap(markerLayers) {
     var topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service',
         maxZoom: 8
+
     });
 
     // Create a baseMaps object
@@ -224,11 +230,13 @@ function createMap(markerLayers) {
 
     // Create object to hold marker overlay
     var overlayMaps = {
+
         "All Sightings 2012-2022": markerLayers[0],
         "Altitude": markerLayers[1],
         "Calculated Total Impact Energy": markerLayers[4],
         "Total Radiated Energy": markerLayers[2],
         "Velocity": markerLayers[3],        
+
     };
     
     // Create the map object
@@ -238,6 +246,7 @@ function createMap(markerLayers) {
         layers: [street, markerLayers[0]]
     }); 
 
+
    
 //     console.log(fireballMap);
 
@@ -245,14 +254,9 @@ function createMap(markerLayers) {
     
 
     return fireballMap;
-
-
-    
+   
 
 }
-
-
-
 
 
 function getColor(yr){
