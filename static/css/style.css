@@ -69,6 +69,16 @@ html {
   padding-left: 14%;
 }
 
+#chart2 {
+  margin: 0 auto;
+  padding-left: 15.25%;
+}
+
+#chart3 {
+  margin: 0 auto;
+  padding-left: 29%;
+}
+
 #map{
   height: 600px;
 }
